@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Saaketh Balusu</title>
+    <meta charset="utf-8">
+    <meta name="description" content="This webpage holds my professional experiences and education background">
+    <meta name="keywords" content="Resume,Saaketh Balusu,Mainframe,Web technologies,SQL,C,C++">
+    <meta name="author" content="Saaketh Balusu">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="http://cdn1.storyfa.com/favicon/3/7/7/d3d3LnNreXNwb3J0cy5jb20.ico"
+    type="image/gif" sizes="16x16">
+    <!-- Adding and external sytlesheet -->
+    <link rel="stylesheet" href="styler.css">
+    <!-- Google analytics tracking code -->
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i[
+                'GoogleAnalyticsObject'
+            ] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || [])
+                .push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(
+                    o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(
+                a, m)
+        })(window, document, 'script',
+            'https://www.google-analytics.com/analytics.js',
+            'ga');
+
+        ga('create', 'UA-96353308-1',
+            'auto');
+        ga('send', 'pageview');
+    </script>
+    <style>
+        #drag {
+            width: 200px;
+            height: 50px;
+            background: #ccc;
+        }
+        #drop {
+            position: absolute;
+            left: 700px;
+            top: 150px;
+            width: 300px;
+            height: 125px;
+            background: yellow;
+            color: #fff;
+            padding: 10px;
+        }
+    </style>
+    <!-- Adding Jquery CDN -->
+    <script src="https://code.jquery.com/jquery-3.1.1.js"
+    integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+    crossorigin="anonymous">
+    </script>
+    <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+
+<body>
+    <!-- This is the navigation bar for the site -->
+    <div class="col-12">
+        <ul class="topnav">
+            <li><a href="index.html">Home</a>
+            </li>
+            <li><a href="Academics.html">Academics</a>
+            </li>
+            <li><a href="experience.html">Skills</a>
+            </li>
+            <li><a href="Contact.html">Contact</a>
+            </li>
+            <li class="right"><a class="active" href="Download.html">Download Resume</a>
+            </li>
+        </ul>
+    </div>
+    <div class="row"></div>
+    <br></br>
+    <a id="download" href="https://drive.google.com/open?id=0B8j47pq5_vEjQl9IeVpNNFk2NmM"
+    style="background:red;">Click to download</a>
+    <script>
+        $("#download").hide()
+    </script>
+    <div id="drag" style="text-align:center">
+        Drag me over to Yellow zone to get the download
+        link
+    </div>
+    <div id="drop">Drop it here</div>
+    <script>
+        $("#drag").draggable();
+        $("#drop").droppable({
+            drop: function() {
+                $(
+                    "#download"
+                ).toggle();
+            }
+        });
+    </script>
+
+</body>
+
+</html>
